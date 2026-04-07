@@ -13,7 +13,7 @@ vercel login
 ```
 
 ### Step 3: Set Environment Variables
-You need to set up these environment variables in Vercel:
+You need to set up these environment variables in Vercell:
 
 #### Required Environment Variables:
 ```bash
