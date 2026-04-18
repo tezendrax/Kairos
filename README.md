@@ -1,4 +1,4 @@
-# Jarvis Scheduler
+# Jarvis 
 
 An intelligent, conversational scheduler + to-do system that proactively reschedules your day, summarizes tasks each morning/night, blocks distraction apps, and nudges you to complete priorities — acting like a personal Jarvis for students and professionals.
 
