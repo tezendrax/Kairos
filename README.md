@@ -32,7 +32,7 @@ An intelligent, conversational scheduler + to-do system that proactively resched
 
 ### Installation
 
-1. **Clone the repository**
+1. **Clone the repository!**
    ```bash
    git clone <repository-url>
    cd jarvis-scheduler
