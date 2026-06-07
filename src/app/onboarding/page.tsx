@@ -4,10 +4,12 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, ArrowLeft, Clock, Target, Calendar, CheckCircle } from 'lucide-react';
 import { useAuth } from '@/contexts/AuthContext';
+import { useApp } from '@/contexts/AppContext';
 import { useRouter } from 'next/navigation';
 
 export default function Onboarding() {
   const { user } = useAuth();
+  const { completeOnboarding } = useApp();
   const router = useRouter();
   const [currentStep, setCurrentStep] = useState(0);
   const [formData, setFormData] = useState({
@@ -21,7 +23,7 @@ export default function Onboarding() {
 
   const steps = [
     {
-      title: "Welcome to Jarvis Scheduler!",
+      title: "Welcome to Kairos!",
       subtitle: "Let's set up your personalized schedule",
       icon: <Target className="w-8 h-8 text-primary" />,
     },
@@ -42,11 +44,18 @@ export default function Onboarding() {
     },
   ];
 
-  const handleNext = () => {
+  const handleNext = async () => {
     if (currentStep < steps.length - 1) {
       setCurrentStep(currentStep + 1);
     } else {
-      // Complete onboarding
+      // Complete onboarding and save preferences
+      await completeOnboarding(
+        formData.wakeUpTime,
+        formData.sleepTime,
+        formData.workHoursStart,
+        formData.workHoursEnd,
+        formData.priorities
+      );
       router.push('/dashboard');
     }
   };
@@ -81,7 +90,7 @@ export default function Onboarding() {
               {steps[0].icon}
             </motion.div>
             <p className="text-neutral-600 mb-8 max-w-md mx-auto">
-              I'm Jarvis, your AI scheduling assistant. I'll help you stay focused, 
+              I'm Kairos, your time-planning companion. I'll help you stay focused, 
               reschedule when life happens, and keep you on track with your priorities.
             </p>
             <div className="space-y-4">

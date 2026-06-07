@@ -70,3 +70,34 @@ body {
 .focus-ring {
   @apply focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
 }
+
+/* Premium Ambient Glowing Blobs */
+@keyframes pulse-slow {
+  0%, 100% {
+    transform: scale(1) translate(0px, 0px);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.1) translate(15px, -25px);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse-slower {
+  0%, 100% {
+    transform: scale(1) translate(0px, 0px);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.05) translate(-20px, 20px);
+    opacity: 0.8;
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 12s infinite ease-in-out;
+}
+
+.animate-pulse-slower {
+  animation: pulse-slower 18s infinite ease-in-out;
+}
