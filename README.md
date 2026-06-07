@@ -8,7 +8,7 @@ I built this application because generic productivity tools felt dry. I wanted a
 
 ## Key Features
 
-### 1. Task Board & AI-Powered Scheduler 📅
+### 1. Task Board & Intellegent Scheduler 📅
 * **Interactive Kanban/List Board**: Manage tasks directly on my dashboard.
 * **Focus Mode**: A dedicated Pomodoro-style timer to track deep work sessions.
 * **Distraction Logging**: Keep track of what takes me out of the zone and review them later.
