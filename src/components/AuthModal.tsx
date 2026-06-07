@@ -70,8 +70,8 @@ export default function AuthModal({ isOpen, onClose, mode, onModeChange }: AuthM
           </h2>
           <p className="text-neutral-600">
             {mode === 'signin' 
-              ? 'Sign in to your Jarvis Scheduler account' 
-              : 'Create your Jarvis Scheduler account'
+              ? 'Sign in to your Kairos account' 
+              : 'Create your Kairos account'
             }
           </p>
         </div>
